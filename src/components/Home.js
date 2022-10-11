@@ -12,7 +12,7 @@ const Home = () => {
 
 
     return (
-        <div className='bg-gray-300'>
+        <div className='bg-gray-300 pb-7'>
             <div className='text-sky-900 p-12 text-center '>
 
                 <h3 className='text-4xl font-bold'>

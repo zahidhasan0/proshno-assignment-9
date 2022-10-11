@@ -11,7 +11,7 @@ const head = () => {
                     </Link>
                     <ul className="items-stretch hidden space-x-3 md:flex">
                         <li className="flex">
-                            <NavLink rel="noopener noreferrer" to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Topics</NavLink>
+                            <NavLink rel="noopener noreferrer" to="/" className={`flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ${({ isActive }) => isActive ? 'bg-white text-sky-900' : undefined}`}>Topics</NavLink>
                         </li>
                         <li className="flex">
                             <NavLink rel="noopener noreferrer" to="/statistics" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Statistics</NavLink>
