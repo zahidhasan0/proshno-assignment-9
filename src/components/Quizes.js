@@ -9,8 +9,8 @@ const Quizes = () => {
     const { name, id, total, questions } = quiz.data;
     // console.log(questions)
     return (
-        <div>
-            <h3>Quiz Of {name}</h3>
+        <div className='my-12'>
+            <h3 className='text-3xl font-bold text-sky-900 '>Quiz Of {name}</h3>
             {questions.map(question => <Question
                 key={question.id}
                 data={question}
