@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Course = ({ course }) => {
-    console.log(course)
-    const { logo, name, total } = course;
+    // console.log(course)
+    const { id, logo, name, total } = course;
     return (
         <div>
             <div className='bg-gray-300 rounded-md '>
@@ -10,7 +11,7 @@ const Course = ({ course }) => {
                     <img className='h-60 w-full' src={logo} alt="" />
                     <h4 className='text-2xl font-bold'>{name} </h4>
                     <p>Total quiz: {total}</p>
-                    <button className='bg-sky-900 text-gray-300 font-semibold px-3 w-full rounded-lg'>Quizes</button>
+                    <Link to={`./quiz/${id}`}><button className='bg-sky-900 text-gray-300 font-semibold px-3 w-full rounded-lg'>Quizes</button></Link>
                 </div>
             </div>
         </div>

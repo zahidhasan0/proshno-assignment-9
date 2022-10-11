@@ -5,7 +5,10 @@ import Course from './Course';
 const Home = () => {
     const allCourses = useLoaderData();
     const courses = allCourses.data;
-    console.log(courses)
+
+    // console.log(courses)
+
+
     return (
         <div className='bg-gray-300'>
             <div className='text-sky-900 p-12 '>

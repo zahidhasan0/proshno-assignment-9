@@ -8,8 +8,9 @@ const Header = () => {
                 <Link to='/'><h3 className='text-3xl font-bold ml-4 '>PROSHNO</h3></Link>
             </div >
             <div>
-                <NavLink className='mr-3' to='/'>Home</NavLink>
-                <Link className='mr-3' to='/quizes'>Topics</Link>
+                <NavLink className='mr-3'
+                    to='/'>Topics</NavLink>
+
                 <Link className='mr-3' to='/statistics'>Statistics</Link>
                 <Link className='mr-3' to='/blogs'>Blogs</Link>
             </div>
