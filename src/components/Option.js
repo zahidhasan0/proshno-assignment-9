@@ -1,21 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+
+
+
+
+
+
+
 
 const Option = ({ option, correctAnswer }) => {
+    const [total, setTotal] = useState([])
+
+
 
     const handleAnswer = (e) => {
+        let rightAns = [];
         if (correctAnswer === e) {
-            console.log('yess');
+            toast.success('success!', { autoClose: 500 })
+
+            rightAns = [...total, e]
+            setTotal(rightAns)
+            console.log(rightAns)
         }
-        else {
-            console.log('no');
-        }
+
+
+        // if (correctAnswer === e) {
+        //     rightAns = [...total, e];
+        //     setTotal(rightAns);
+
+        // }
+        // else {
+        //     alert('wrong ans')
+        // }
+
     }
+    // console.log(total)
 
     return (
-        <div className='flex border border-white p-4'>
-            <input onClick={(e) => handleAnswer(e.target.value)} className='mr-3' type="radio" name="" id="" value={option} />
-            <p >{option}</p>
-        </div>
+        <fieldset className='flex border border-white p-4'>
+            <div>
+                <input onClick={(e) => handleAnswer(e.target.value)} type="radio" id="option" name="option" value={option}
+                    checked />
+                <label className='ml-3' for="option">{option}</label>
+            </div>
+        </fieldset>
     );
 };
 

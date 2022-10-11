@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const head = () => {
     return (
         <div>
-            <header className="p-3 dark:bg-sky-900 dark:text-gray-100">
+            <header className="p-4 dark:bg-gray-800 dark:text-gray-100">
                 <div className="container flex justify-between h-16 mx-auto">
                     <Link rel="noopener noreferrer" to="/" aria-label="Back to homepage" className="flex items-center p-2">
                         <h4 className='text-3xl'>PROSHNO</h4>
@@ -17,7 +17,7 @@ const head = () => {
                             <NavLink rel="noopener noreferrer" to="/statistics" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Statistics</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink rel="noopener noreferrer" to="/blogs" className="flex items-center px-4 -mb-1 ">Blogs</NavLink>
+                            <NavLink rel="noopener noreferrer" to="/blogs" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Blogs</NavLink>
                         </li>
 
                     </ul>
