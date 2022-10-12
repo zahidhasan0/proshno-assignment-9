@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import CourseForStatistics from './CourseForStatistics';
+
 
 const Statistics = () => {
     const loadCourses = useLoaderData();
