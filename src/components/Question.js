@@ -25,6 +25,7 @@ const Question = ({ data }) => {
                     key={option.idx}
                     option={option}
                     correctAnswer={correctAnswer}
+                    options={options}
                 ></Option>)}
             </div>
         </div>

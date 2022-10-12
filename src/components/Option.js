@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 
 
 
-const Option = ({ option, correctAnswer }) => {
+
+const Option = ({ option, options, correctAnswer }) => {
 
     const [total, setTotal] = useState([])
     useEffect(() => {
@@ -18,29 +19,15 @@ const Option = ({ option, correctAnswer }) => {
     let rightAns = [];
     const handleAnswer = (e) => {
         if (correctAnswer === e) {
-            toast.success('Your answer is right', { autoClose: 500 })
-
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Congratulations! Your ans is right!!',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            toast('Your ans is correct')
 
         }
         else {
-            Swal.fire({
-                position: 'center',
-                icon: 'error',
-                title: 'Wrong answer!!',
-                showConfirmButton: false,
-                timer: 1500
-
-            })
+            toast('Wrong ans!!!')
         }
 
-        const exist = total.find(single => single === e)
+        const exist = total.find(single => single === correctAnswer)
+
         if (exist) {
             return;
         }
@@ -49,30 +36,16 @@ const Option = ({ option, correctAnswer }) => {
             setTotal(rightAns)
         }
 
+
     }
-    console.log(total)
-
-
-
-    // if (correctAnswer === e) {
-    //     rightAns = [...total, e];
-    //     setTotal(rightAns);
-
-    // }
-    // else {
-    //     alert('wrong ans')
-    // }
-
-
-    // console.log(total)
-
     return (
         <fieldset className='flex border border-white p-4 mt-3'>
             <div data-aos="fade-left">
-                <input onClick={(e) => handleAnswer(e.target.value)} type="radio" id="option" name="option" value={option}
+                <input onClick={(e) => handleAnswer(e.target.value)} className='cursor-pointer' type="radio" id="option" name="option" value={option}
                 />
-                <label className='ml-3' for="option">{option}</label>
+                <label className='ml-3' for="option">{option} </label>
             </div>
+            <ToastContainer />
         </fieldset>
     );
 }
