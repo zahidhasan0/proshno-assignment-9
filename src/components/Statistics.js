@@ -12,13 +12,15 @@ const Statistics = () => {
             <div className='md:w-1/2 mx-auto mt-9'>
 
 
-                <LineChart width={300} height={300} data={allCourses} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-                    <Line type="monotone" dataKey="total" stroke="#8884d8" />
-                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                </LineChart>
+                <ResponsiveContainer width={'99%'} height={300}>
+                    <LineChart width={300} height={300} data={allCourses} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+                        <Line type="monotone" dataKey="total" stroke="#8884d8" />
+                        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                    </LineChart>
+                </ResponsiveContainer>
 
 
 
