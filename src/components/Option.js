@@ -19,11 +19,15 @@ const Option = ({ option, options, correctAnswer }) => {
     let rightAns = [];
     const handleAnswer = (e) => {
         if (correctAnswer === e) {
-            toast('Your ans is correct')
+            toast.success('Your ans is correct', {
+                position: 'top-center'
+            })
 
         }
         else {
-            toast('Wrong ans!!!')
+            toast.error('Wrong ans!!!', {
+                position: 'top-center'
+            })
         }
 
         const exist = total.find(single => single === correctAnswer)
@@ -40,10 +44,10 @@ const Option = ({ option, options, correctAnswer }) => {
     }
     return (
         <fieldset className='flex border border-white p-4 mt-3'>
-            <div data-aos="fade-left">
+            <div data-aos="fade-left" className='flex'>
                 <input onClick={(e) => handleAnswer(e.target.value)} className='cursor-pointer' type="radio" id="option" name="option" value={option}
                 />
-                <label className='ml-3' for="option">{option} </label>
+                <p className='ml-3' for="option">{option} </p>
             </div>
             <ToastContainer />
         </fieldset>
