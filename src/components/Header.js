@@ -1,23 +1,25 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import './Header.css'
 
 const head = () => {
     return (
         <div>
-            <header className="p-3 dark:bg-sky-900 dark:text-gray-100">
+            <header className="px-16 py-3 dark:bg-sky-900 dark:text-gray-300">
                 <div className="container flex justify-between h-16 mx-auto">
-                    <Link rel="noopener noreferrer" to="/" aria-label="Back to homepage" className="flex items-center p-2">
-                        <h4 className='text-3xl'>PROSHNO</h4>
+                    <Link rel="noopener noreferrer" to="/" className="flex items-center p-2">
+                        <h4 className='text-3xl font-extrabold '>PROSHNO</h4>
                     </Link>
                     <ul className="items-stretch hidden space-x-3 md:flex">
+
                         <li className="flex">
-                            <NavLink rel="noopener noreferrer" to="/" className={`flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ${({ isActive }) => isActive ? 'bg-white text-sky-900' : undefined}`}>Topics</NavLink>
+                            <NavLink rel="noopener noreferrer" to="/" className={`flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ${({ isActive }) => isActive ? 'active' : undefined}`}>Topics</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink rel="noopener noreferrer" to="/statistics" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Statistics</NavLink>
+                            <NavLink rel="noopener noreferrer" to="/statistics" className={`flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ${({ isActive }) => isActive ? 'active' : undefined}`}>Statistics</NavLink>
                         </li>
                         <li className="flex">
-                            <NavLink rel="noopener noreferrer" to="/blogs" className="flex items-center px-4 -mb-1 ">Blogs</NavLink>
+                            <NavLink rel="noopener noreferrer" to="/blogs" className={`flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ${({ isActive }) => isActive ? 'active' : undefined}`}>Blogs</NavLink>
                         </li>
 
                     </ul>

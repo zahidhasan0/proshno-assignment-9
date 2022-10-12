@@ -67,7 +67,7 @@ const Option = ({ option, correctAnswer }) => {
     // console.log(total)
 
     return (
-        <fieldset className='flex border border-white p-4'>
+        <fieldset className='flex border border-white p-4 mt-3'>
             <div data-aos="fade-left">
                 <input onClick={(e) => handleAnswer(e.target.value)} type="radio" id="option" name="option" value={option}
                 />
