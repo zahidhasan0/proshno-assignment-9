@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Course from './Course';
 
 
 
+
 const Home = () => {
+
     const allCourses = useLoaderData();
     const courses = allCourses.data;
 

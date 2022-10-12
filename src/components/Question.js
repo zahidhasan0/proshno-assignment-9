@@ -1,15 +1,16 @@
 import React from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
 
+
 import Option from './Option';
-import { toast } from 'react-toastify';
+
 
 const Question = ({ data }) => {
     // console.log(data);
     const { question, correctAnswer, options } = data;
 
     const handleEyeBtn = () => {
-        toast.info({ correctAnswer }, { autoClose: 500 })
+
     }
     return (
         <div className='p-5 md:w-1/2 mx-auto mt-7 bg-sky-900 text-white rounded-md '>
@@ -19,6 +20,7 @@ const Question = ({ data }) => {
             </div>
             <div className='grid md:last:grid-cols-2 gap-2'>
                 {options.map(option => <Option
+                    key={option.idx}
                     option={option}
                     correctAnswer={correctAnswer}
                 ></Option>)}
